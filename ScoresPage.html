@@ -1,0 +1,179 @@
+<html>
+<head>
+<style type= "text/css">
+body{
+	background:#D5DED9;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.3);
+	border:3px solid white;
+	border-radius:5px;
+	margin:15px;
+	color:#3f4446;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-family:open sans;
+	font-size:30px;
+}
+.text_box,.submit_button,.submit_button2{
+	width:70%;
+	height:50%;
+	color:White;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-family:open sans;
+	font-size:30px;
+	background:#3F4446;
+	border:1px solid white;
+	border-radius:5px;
+	position: absolute;
+	transition: all 0.5s ease-out;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.3);
+	left:15%;
+	top:30%;
+}
+.input_box{
+	width:50%;
+	height:10%;
+	color:White;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-family:open sans;
+	font-size:30px;
+	background:#3F4446;
+	border:1px solid white;
+	border-radius:5px;
+	position: absolute;
+	transition: all 0.5s ease-out;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.3);
+	left:25%;
+	top:30%;
+}
+.submit_button,.submit_button2{
+	background:#7B9797;
+    top: 82%;
+    width: 15%;
+    left: 70%;
+    font-size: 20px;
+    height: 5%;
+}
+.submit_button2{
+	top: 42%;
+	left: 60.1%;
+}
+input[type="file" i]{
+-webkit-appearance:none;
+}
+.text_box:hover,.submit_button:hover,.submit_button2:hover{
+	background:#465968;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1), 0 14px 8px rgba(0,0,0,.3);
+}
+.choice_button{
+	width:40%;
+	height:10%;
+	color:White;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-family:open sans;
+	font-size:30px;
+	background:#3F4446;
+	border:1px solid white;
+	border-radius:5px;
+	position: absolute;
+	transition: all 0.5s ease-out;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.3);
+	left:9%;
+	top:30%;
+}
+#b{
+left:52%;
+}
+.signup_button{
+	top:42%;
+}
+.choice_button:hover{
+	background:#465968;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1), 0 14px 8px rgba(0,0,0,.3);
+}
+.display-none{
+	display:none;
+}
+.restart{
+	position: absolute;
+    bottom: 5%;
+    left: 50%;
+    font-size: 30px;
+    border: 3px solid white;
+	color:white;
+    padding: 5px;
+    border-radius: 100%;
+	background:#E3CC86;
+	transition: all 0.5s ease-out;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.3);
+}
+.restart:hover{
+	background:#AE9D78;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1), 0 14px 8px rgba(0,0,0,.3);
+}
+.x{
+	background: #465968;
+    width: 97.2%;
+    height: 94.5%;
+    opacity: .7;
+    border-radius: 5px;
+    position: fixed;
+    left: 18px;
+    top: 18px;
+    z-index: -1;
+}
+</style>
+</head>
+
+<body>
+	<script type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		function choosecp(){
+		 $("#copy").removeClass('display-none');
+		 $("#a").addClass('display-none');
+		 $("#b").addClass('display-none');
+		 $("#c").removeClass('display-none');
+		 }
+		 function choosef(){
+		 $("#file").removeClass('display-none');
+		 $("#a").addClass('display-none');
+		 $("#b").addClass('display-none');
+		 $("#d").removeClass('display-none');
+		 }
+		 function restart(){
+		 $("#file").addClass('display-none');
+		 $("#copy").addClass('display-none');
+		 $("#a").removeClass('display-none');
+		 $("#b").removeClass('display-none');
+		 $("#c").addClass('display-none');
+		 $("#d").addClass('display-none');
+		 }
+	</script>
+	<script src="https://use.fontawesome.com/4fe18aaa6f.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans|Poiret+One" rel="stylesheet">
+	<div class = "x"></div>
+	Submit some words or a file and get a score.
+	<a><div id="a" class="choice_button" onclick="choosef()">Submit a file</div></a> 
+	<a><div id="b" class="choice_button" onclick="choosecp()">Paste your work</div></a> 
+	
+	<form id = "file" class= "display-none" action="/pasteaction.php">
+	  <input class = "input_box" type="file" placeholder= "Lorem Ipsum...." name="Files"><br>
+	  <input class = "submit_button2" type="submit" value="Submit">
+	</form>
+	
+	<form id = "copy" class= "display-none" action="/typeaction.php">
+	  <textarea class = "text_box" type="text" placeholder= "Lorem Ipsum...." name="Paste"></textarea><br>
+	  <input class = "submit_button" type="submit" value="Submit">
+	</form>
+	<a><div id="c" class="submit_button display-none" style = "background:#E3CC86;left: 54%;height: 4.6%;" onclick="restart()">Restart</div></a> 
+	<a><div id="d" class="submit_button2 display-none" style = "background:#E3CC86;left: 44%;height: 4.6%;" onclick="restart()">Restart</div></a> 
+	<a class = "restart" href= "/OptionsPage.html"><i class="fa fa-reply" aria-hidden="true"></i></a>
+	</body>
+</html>

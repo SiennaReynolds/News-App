@@ -1,0 +1,100 @@
+<html>
+<head>
+<style type= "text/css">
+body{
+	background:#D5DED9;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.3);
+	border:3px solid white;
+	border-radius:5px;
+	margin:15px;
+	color:#3f4446;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-family:open sans;
+	font-size:30px;
+}
+.form_field,.submit_button{
+	width:40%;
+	height:10%;
+	color:White;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-family:open sans;
+	font-size:30px;
+	background:#3F4446;
+	border:1px solid white;
+	border-radius:5px;
+	position: absolute;
+	transition: all 0.5s ease-out;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.3);
+	left:30%;
+	top:30%;
+}
+.submit_button{
+	background:#7B9797;
+    top: 42%;
+    width: 15%;
+    left: 55%;
+    font-size: 20px;
+    height: 5%;
+}
+.login_button:hover,.submit_button:hover{
+	background:#465968;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1), 0 14px 8px rgba(0,0,0,.3);
+}
+.restart{
+	position: absolute;
+    bottom: 5%;
+    left: 50%;
+    font-size: 30px;
+    border: 3px solid white;
+	color:white;
+    padding: 5px;
+    border-radius: 100%;
+	background:#E3CC86;
+	transition: all 0.5s ease-out;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.3);
+}
+.restart:hover{
+	background:#AE9D78;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1), 0 14px 8px rgba(0,0,0,.3);
+}
+.x{
+	background: #465968;
+    width: 97.2%;
+    height: 94.5%;
+    opacity: .7;
+    border-radius: 5px;
+    position: fixed;
+    left: 18px;
+    top: 18px;
+    z-index: -1;
+}
+</style>
+</head>
+
+<body>
+	<script src="https://use.fontawesome.com/4fe18aaa6f.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans|Poiret+One" rel="stylesheet">
+	<div class = "x"></div>
+	Choose a genre.
+	<form action="genrepick.php" method = "get">
+	  <select class = "form_field" name= "genre">
+		<option value="0">Sports</option>
+		<option value="1">News</option>
+		<option value="2">Politics</option>
+		<option value="3">Weather</option>
+		<option value="4">Technology</option>
+		<option value="5">Opinion</option>
+		<option value="6">Local</option>
+		<option value="7">Finance</option>
+		<option value="8">Recreation</option>
+		<option value="9">Crime</option>
+	  </select>
+	  <input class = "submit_button" type="submit" value="Submit">
+	</form>
+	<a class = "restart" href= "/OptionsPage.html"><i class="fa fa-reply" aria-hidden="true"></i></a>
+	</body>
+</html>
